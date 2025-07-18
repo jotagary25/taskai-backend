@@ -26,5 +26,5 @@ def login(user_in: UserLogin, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.email == user_in.email).first()
     if not user or not verify_password(user_in.password, str(user.hashed_password)):
         raise HTTPException(status_code=400, detail="Credenciales incorrectas")
-    token = create_token({"sub": user.email})
+    token = create_token({"user": user.email, "user_id": str(user.id)})
     return Token(access_token=token)
