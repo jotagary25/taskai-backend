@@ -2,8 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.domain.models import Base
 from app.core.database import engine
-from app.api import auth
-from app.api import chat
+from app.api import auth, chat, tasks
 
 app = FastAPI(
     title="TASK AI",
@@ -23,6 +22,7 @@ app.add_middleware(
 
 app.include_router(chat.router, prefix="/chat", tags=["chat"])
 app.include_router(auth.router, prefix="/auth", tags=["auth"])
+app.include_router(tasks.router, prefix="/tasks", tags=["tasks"])
 
 @app.get("/")
 async def health_check():
