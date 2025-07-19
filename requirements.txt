@@ -4,7 +4,7 @@ python-dotenv
 asyncpg
 sqlalchemy
 databases
-aioredis
+redis[hiredis]
 passlib[bcrypt]
 python-jose[cryptography]
 psycopg2-binary

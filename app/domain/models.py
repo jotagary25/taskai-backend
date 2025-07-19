@@ -3,7 +3,6 @@ import enum
 from sqlalchemy import Column, String, DateTime, func, Enum, ForeignKey, Integer
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.ext.declarative import declarative_base
-from datetime import datetime
 
 Base = declarative_base()
 
