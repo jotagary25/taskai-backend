@@ -23,6 +23,24 @@ Backend hecho con FastAPI, Docker, Postgres, Redis, y GEMINI AI como LLM a trav�
 
 El detalle de los prompt que se usan esta en: `app/services/chat_servicios.py`
 
+## EJEMPLO CHARLA
+  - usuario: Hola, como estas
+  - asistente: ¡Hola! Estoy bien, gracias por preguntar. ¿En qué puedo ayudarte hoy?
+  - usuario: quiero agendar una tarea
+  - asistente: Necesito el nombre de la tarea y la fecha límite para agendar la tarea. ¿Podés indicármelo?
+  - para el miercoles a las 12, ir a la oficina a travbajar
+  - Tarea creada: 'ir a la oficina a travbajar' para el 23/07/2025 12:00. ¿Necesitas agendar alguna otra tarea?
+  - si, para el jueves, tengo un partido a las 19 horas
+  - Tarea creada: 'partido' para el 24/07/2025 19:00. ¿Hay algo más que deba agendar?
+  - muestrame las tareas que tengo para el martes
+  - Estas son tus tareas para el martes:
+      Llevar el auto al mecánico (22/07 02:16), ¿Deseas cambiar la fecha?
+      Llevar a los niños al colegio (22/07 10:00), ¿Deseas cambiar la fecha?
+      Limpiar los cuartos (22/07 10:00), ¿Deseas cambiar la fecha?
+      ¿Hay algo más en lo que te pueda ayudar?
+  - no gracias,
+  - ¡Perfecto! ¡Hasta luego y que tengas un gran día! Si necesitas algo más, no dudes en volver.
+
 ## Table of Contents
 1.  [Project Overview](#project-overview)
 2.  [Architecture](#architecture)
