@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.domain.models import Base
 from app.core.database import engine
 from app.api import auth, chat, tasks
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI(
     title="TASK AI",

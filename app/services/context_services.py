@@ -19,3 +19,7 @@ class RedisContextService:
         key = f"context:user:{user_id}"
         raw_messages = await self.redis.lrange(key, 0, N_MAX_MESSAGES - 1)
         return [json.loads(message) for message in reversed(raw_messages)]
+    
+    async def clear_context(self, user_id: str):
+        key = f"context:user:{user_id}"
+        await self.redis.delete(key)
